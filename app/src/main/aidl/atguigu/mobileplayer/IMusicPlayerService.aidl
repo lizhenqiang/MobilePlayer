@@ -1,0 +1,76 @@
+// IMusicPlayerService.aidl
+package atguigu.mobileplayer;
+
+// Declare any non-default types here with import statements
+
+interface IMusicPlayerService {
+    /**
+     * Demonstrates some basic types that you can use as parameters
+     * and return values in AIDL.
+     */
+    /**
+        * 根据位置打开一个音频并且播放
+        *
+        * @param position
+        */
+      void openAudio(int position);
+
+       /**
+        * 开始播放音频
+        */
+         void start();
+       /**
+        * 暂停
+        */
+       void pause();
+
+       /**
+        * 得到歌曲的名称
+        */
+       String getAudioName();
+
+       /**
+        * 得到歌曲演唱者的名字
+        */
+       String getArtistName();
+
+
+       /**
+        * 得到歌曲的当前播放进度
+        */
+       int getCurrentPosition();
+
+       /**
+        * 得到歌曲的当前总进度
+        */
+       int getDuration();
+
+       /**
+        * 播放下一首歌曲
+        */
+       void next();
+
+       /**
+        * 播放上一首歌曲
+        */
+       void pre();
+
+       /**
+        * 得到播放模式
+        */
+       int getPlayMode();
+
+       /**
+        * 设置播放模式
+        */
+       void setPlayMode(int mode);
+         void seekTo(int position);
+
+         boolean isPlaying();
+
+
+        void notifyChange(String action);
+         String getAudioPath();
+         int getAudioSessionId();
+
+}

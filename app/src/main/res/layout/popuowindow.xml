@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@drawable/base_bg"
+    android:id="@+id/list_ll">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerPadding="5dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:layout_weight="1">
+
+
+        <TextView
+            android:id="@+id/list_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="播放队列"
+            android:textSize="20dp"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textIsSelectable="false" />
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/list_item_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="1"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textIsSelectable="false" />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/list_playmode"
+            android:layout_width="wrap_content"
+            android:background="@drawable/btn_audio_playmode_normal_selector"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+    </ListView>
+
+
+</LinearLayout>

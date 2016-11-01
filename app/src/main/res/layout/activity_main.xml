@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<atguigu.mobileplayer.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/dl"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/bg" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="30dp"
+    android:paddingLeft="30dp"
+    android:paddingTop="50dp" >
+
+  <!-- <ImageView
+       android:id="@+id/ic_topbanner_logo2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="8dp"
+       android:src="@drawable/ic_topbanner_logo"/>
+
+
+   <TextView
+       android:id="@+id/tv_mail"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_marginTop="10dp"
+       android:layout_marginLeft="10dp"
+       android:text="我的最爱"
+       android:textColor="#ffffff"
+       android:textSize="15sp"
+       android:layout_below="@+id/ic_topbanner_logo2"/>-->
+   <LinearLayout
+       android:id="@+id/ll1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical" >
+
+      <ImageView
+          android:id="@+id/ic_topbanner_logo2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_topbanner_logo" />
+
+      <TextView
+
+          android:layout_marginTop="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_marginLeft="20dp"
+          android:text="我的最爱"
+          android:textColor="#ffffff"
+          android:textSize="20sp" />
+   </LinearLayout>
+
+   <ListView
+       android:layout_marginBottom="30dp"
+       android:layout_marginTop="20dp"
+       android:cacheColorHint="#00000000"
+       android:divider="@null"
+       android:textColor="#ffffff"
+       android:background="@android:color/white"
+       android:layout_below="@+id/ll1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/lv_myfavrite"
+       >
+
+   </ListView>
+
+
+</RelativeLayout>
+
+<atguigu.mobileplayer.MyRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee" >
+
+   <!--<RelativeLayout
+       android:id="@+id/rl_title"
+       android:layout_width="match_parent"
+       android:layout_height="55dp"
+       android:background="#009990" >
+
+      <ImageView
+          android:id="@+id/iv_icon"
+          android:layout_width="42dp"
+          android:layout_height="42dp"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="10dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/ic_launcher" />
+
+
+   </RelativeLayout>-->
+
+   <LinearLayout
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+
+       tools:context="atguigu.mobileplayer.MainActivity"
+       android:orientation="vertical">
+
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="55dp"
+          android:orientation="horizontal"
+          android:gravity="center"
+          android:background="#ff3097fd">
+
+         <ImageView
+             android:id="@+id/ic_topbanner_logo"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="8dp"
+             android:src="@drawable/ic_topbanner_logo"/>
+         <TextView
+             android:id="@+id/tv_search"
+             android:layout_weight="1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="8dp"
+             android:background="@drawable/tv_search_bg_selector"
+             android:clickable="true"
+             android:drawableLeft="@drawable/tv_search_drawable_selector"
+             android:drawablePadding="5dp"
+             android:text="全网搜索"
+             android:textSize="14dp"
+             android:textColor="@drawable/tv_search_textcolor_selector"
+
+
+
+             />
+
+         <RelativeLayout
+             android:layout_marginLeft="8dp"
+             android:id="@+id/rl_game"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+            <TextView
+
+                android:id="@+id/tv_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_topbanner_game"/>
+            <ImageView
+                android:layout_alignRight="@+id/tv_game"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:background="@drawable/iv_point_shape"
+                />
+
+         </RelativeLayout>
+         <ImageView
+             android:id="@+id/iv_history"
+             android:layout_marginLeft="8dp"
+             android:layout_marginRight="8dp"
+             android:src="@drawable/ic_topbanner_record"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             />
+
+      </LinearLayout>
+      <FrameLayout
+          android:id="@+id/fl_main_container"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+
+          ></FrameLayout>
+      <RadioGroup
+
+          android:id="@+id/rg_main"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="#11000000"
+          android:gravity="center_vertical"
+          android:padding="5dp"
+          android:orientation="horizontal"
+
+          >
+         <RadioButton
+
+             android:id="@+id/rb_local_video"
+             style="@style/bottom_style_tab"
+             android:text="本地视频"
+             android:drawableTop="@drawable/rb_local_video_drawable"/>
+         <RadioButton
+
+             android:id="@+id/rb_local_audio"
+             style="@style/bottom_style_tab"
+             android:text="本地音乐"
+             android:drawableTop="@drawable/rb_local_audio_drawable"/>
+         <RadioButton
+
+             android:id="@+id/rb_net_video"
+             style="@style/bottom_style_tab"
+             android:text="网络视频"
+             android:drawableTop="@drawable/rb_net_video_drawable"/>
+         <RadioButton
+
+             android:id="@+id/rb_net_audio"
+             style="@style/bottom_style_tab"
+             android:text="网络音乐"
+             android:drawableTop="@drawable/rb_net_audio_drawable"/>
+         <RadioButton
+
+             android:id="@+id/rb_net_res1"
+             style="@style/bottom_style_tab"
+             android:text="网络新鲜"
+             android:drawableTop="@drawable/rb_local_video_drawable"/>
+         <RadioButton
+
+             android:id="@+id/rb_net_res2"
+             style="@style/bottom_style_tab"
+             android:text="网络热门"
+             android:drawableTop="@drawable/rb_local_video_drawable"/>
+      </RadioGroup>
+
+   </LinearLayout>
+
+</atguigu.mobileplayer.MyRelativeLayout>
+
+</atguigu.mobileplayer.DragLayout>
